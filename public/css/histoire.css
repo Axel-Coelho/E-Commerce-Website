@@ -1,0 +1,102 @@
+
+.top-block {
+    position: relative;
+}
+
+.top-block img {
+    max-width: 100%;
+}
+
+.top-block h1 {
+    position: absolute;
+    left: 200px;
+    top: 305px;
+    font-size: 59px;
+
+}
+
+#who-is {
+    color: #E30613;
+    font-family: hummingbird, sans-serif;
+    font-style: normal; 
+    font-weight: 400;
+    line-height: 60px;
+    font-size: 105px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 70px 0;
+}
+
+
+.block h1 {
+    color: #E30613;
+    text-align: center;
+    margin: 45px 0;
+    font-family: hummingbird, sans-serif;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 100px;  
+}
+
+.paragraph-col {
+    max-width: 400px;
+    text-align: left;
+}
+
+#first-paragraph:first-letter {
+    color: black;
+    font-family: hummingbird, sans-serif;
+    font-style: normal; 
+    font-weight: 400;  
+    font-size: 500%;
+    line-height: 0;
+
+}
+
+#first-paragraph {
+    color: #E30613;
+}
+
+.second-block{
+    background-color: #f8f8f8;
+}
+
+
+.third-block .left-block .paragraph-col:first-letter, .fourth-block .paragraphs .paragraph-col:first-child:first-letter {
+    color: #E30613;
+    font-family: hummingbird, sans-serif;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 500%;
+    line-height: 0;
+}
+.third-block .right-block {
+    max-width: 50%;
+}
+
+.third-block .right-block img {
+    max-width: 100%;
+}
+
+.fourth-block {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    background-color: #f8f8f8
+}
+
+.fourth-block .paragraphs {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.img-block img {
+    max-width: 100%;
+}
+

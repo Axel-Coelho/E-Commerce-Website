@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Redirect;
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
+//Page histoire
+Route::get('/histoire', 'HistoireController@index')->name('histoire');
+
 // Pages produits
 Route::get('/shop', 'ShopController@index')->name('shop');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
@@ -26,6 +29,9 @@ Route::get('/checkout/success', 'CheckoutController@success')->name('checkout.su
 
 // Commandes
 Route::get('/orders', 'HomeController@orders')->name('orders');
+
+//Maintenance
+Route::get('/gazette', 'GazetteController@index')->name('gazette');
 
 
 Route::group(['prefix' => 'admin'], function () {

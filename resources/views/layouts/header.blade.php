@@ -32,7 +32,7 @@
                         </li>
                     </ul> -->
                     <div class="header-group navbar-nav mr-auto ml-5" id="links">
-                        <a href="une-fois.html">
+                        <a href="{{ route('histoire') }}">
                             Il&nbsp;était&nbsp;une&nbsp;fois
                         </a>
 
@@ -40,7 +40,7 @@
                             L'échoppe
                         </a>
 
-                        <a href="gazette.html">
+                        <a href="{{ route('gazette') }}">
                             La&nbsp;gazette&nbsp;du&nbsp;coureur
                         </a>
 
