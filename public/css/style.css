@@ -25,3 +25,58 @@
 .StripeElement--webkit-autofill {
     background-color: #fefde5 !important;
 }
+
+/* Section navbar css
+============================================================================================ */
+
+.picto {
+    vertical-align: middle;
+    width: 25px;
+}
+
+#main-logo {
+    width: 110px;
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+}
+
+.header-group i {
+    font-size: 24px;
+    /*margin: 3px;*/
+}
+
+.header-group a {
+    padding: 0 15px;
+}
+
+#links a {
+    border-right: 2px solid #E30613;
+}
+
+#links a:last-child {
+    border: none;
+}
+
+/* home.blade.php
+============================================================================================ */
+
+main {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.map {
+    max-width: 100%;
+}

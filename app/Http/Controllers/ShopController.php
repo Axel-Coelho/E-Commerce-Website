@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $products = Product::all();
@@ -23,12 +18,6 @@ class ShopController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->firstOrFail();
@@ -37,12 +26,6 @@ class ShopController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //

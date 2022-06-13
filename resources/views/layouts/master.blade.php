@@ -15,7 +15,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Karma Shop</title>
+	<title>Coureurs des bois</title>
 	<!--
 		CSS
 		============================================= -->
@@ -31,6 +31,7 @@
 	<link rel="stylesheet" href="{{ asset('css/ion.rangeSlider.skinFlat.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 	@yield('includes')
 </head>
 

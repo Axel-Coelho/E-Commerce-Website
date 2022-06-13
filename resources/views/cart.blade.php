@@ -3,19 +3,17 @@
 @section('content')
 
 <!-- Start Banner Area -->
-<section class="banner-area organic-breadcrumb">
+<!-- <section class="banner-area organic-breadcrumb">
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>Shopping Cart</h1>
+                <h1>MON PANIER</h1>
                 <nav class="d-flex align-items-center">
-                    <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="category.html">Cart</a>
                 </nav>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- End Banner Area -->
 
 <!--================Cart Area =================-->
@@ -30,17 +28,17 @@
         <div class="cart_inner">
 
             @if(Cart::count() > 0)
-
-            <h2>{{ Cart::count() }} article(s) dans le panier</h2>
+            <br></br>
+            <h1>MON PANIER</h1>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                        <tr>
+                        <!-- <tr>
                             <th scope="col">Product</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Actions</th>
-                        </tr>
+                        </tr> -->
                     </thead>
                     <tbody>
                         @foreach(Cart::content() as $product)
@@ -57,19 +55,23 @@
                                 </div>
                             </td>
                             <td>
-                                <h5>{{ $product->model->price }} €</h5>
-                            </td>
-                            <td>
                                 <div class="product_count">
                                     <input disabled type="text" name="qty" id="sst" maxlength="12" value="x {{ $product->qty }}" title="Quantity:" class="input-text qty">
                                 </div>
+                                <br></br>
+                                <h5 class="product-price-center">{{ $product->model->price }} €</h5>
+                            </td>
+                            <td>
+                                <!-- <div class="product_count">
+                                    <input disabled type="text" name="qty" id="sst" maxlength="12" value="x {{ $product->qty }}" title="Quantity:" class="input-text qty">
+                                </div> -->
                             </td>
                             <td>
                                 <form action="{{ route('cart.destroy', $product->rowId) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
 
-                                    <button type="submit" class="btn btn-link">Supprimer</button>
+                                    <button type="submit" class="btn btn-link">X</button>
                                 </form>
                             </td>
                         </tr>
@@ -103,8 +105,8 @@
                             </td>
                             <td>
                                 <div class="checkout_btn_inner d-flex align-items-center">
-                                    <a class="gray_btn" href="{{ route('shop') }}">Continue Shopping</a>
-                                    <a class="primary-btn" href="{{ route('checkout.index') }}">Proceed to checkout</a>
+                                    <a class="gray_btn" href="{{ route('shop') }}">Continuer mes achats</a>
+                                    <a class="primary-btn" href="{{ route('checkout.index') }}">Valider mon panier</a>
                                 </div>
                             </td>
                         </tr>
@@ -112,7 +114,9 @@
                 </table>
             </div>
             @else
-            <h3 class="my-3 text-center">Aucun article dans le panier</h3>
+            <br></br>
+            <br></br>
+            <h2 class="my-3 text-center">Aucun article dans le panier</h2>
             <div class="d-flex justify-content-around">
                 <a class="gray_btn" href="{{ route('shop') }}">Continue Shopping</a>
             </div>
